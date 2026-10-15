@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anime AI Studio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">✦ Anime<span>AI</span></div>
+    <div class="status">
+      <span class="dot"></span> Studio Ready
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">YOUR ANIME. YOUR WORLD.</p>
+      <h1>Apni imagination ko<br><span>Anime mein badlo.</span></h1>
+      <p class="subtitle">
+        Apni story likho aur use detailed anime scenes aur video prompts mein badlo.
+      </p>
+    </section>
+
+    <section class="workspace">
+      <div class="panel">
+        <h2>✍️ Apni story likho</h2>
+        <p class="hint">Hero, location, events aur emotions ke baare mein batao.</p>
+
+        <label for="story">Anime story prompt</label>
+        <textarea
+          id="story"
+          placeholder="Example: Ek school student ko ek din mysterious power milti hai. Woh apne dost ke saath ek secret duniya ki khoj karta hai..."
+        ></textarea>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="minutes">Episode ki length</label>
+            <select id="minutes">
+              <option value="1">1 minute (testing)</option>
+              <option value="3">3 minutes</option>
+              <option value="5" selected>5 minutes</option>
+              <option value="7">7 minutes</option>
+              <option value="10">10 minutes</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="style">Animation style</label>
+            <select id="style">
+              <option value="2D Japanese anime">2D Japanese Anime</option>
+              <option value="Romantic anime">Romantic Anime</option>
+              <option value="Action anime">Action Anime</option>
+              <option value="Dark fantasy anime">Dark Fantasy</option>
+            </select>
+          </div>
+        </div>
+
+        <button id="generateBtn" type="button">
+          ✨ Generate Anime Scenes
+        </button>
+        <p class="small-note">
+          Abhi yeh scenes aur prompts banayega, video files nahi.
+        </p>
+        <p id="message" class="message" aria-live="polite"></p>
+      </div>
+
+      <div class="panel results-panel">
+        <div class="results-heading">
+          <div>
+            <p class="eyebrow">YOUR CREATION</p>
+            <h2>Scene Studio</h2>
+          </div>
+          <span id="sceneCount" class="count">0 scenes</span>
+        </div>
+
+        <div id="emptyState" class="empty-state">
+          <div class="empty-icon">🎬</div>
+          <h3>Tumhari anime yahan banegi</h3>
+          <p>Apni story likho aur Generate Anime Scenes par click karo.</p>
+        </div>
+
+        <div id="results" class="results" hidden></div>
+      </div>
+    </section>
+
+    <footer>
+      Anime AI Studio <span>•</span> Create your own universe
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
